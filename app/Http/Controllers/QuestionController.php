@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\EasyQuestions;
 use App\Models\Question;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -40,7 +41,7 @@ class QuestionController extends Controller
         return redirect()->back();
     }
 
-    public function checkEasyAnswer(Request $request)
+    public function checkEasyAnswer(Request $request):JsonResponse
     {
         $credentials = $request->only('easyanswer', 'question_id');
 
@@ -49,9 +50,9 @@ class QuestionController extends Controller
         $data = ['message' => 'Success'];
 
         if ($credentials['easyanswer'] == $easyquestion->easyanswer){
-            return response()->json('burat', 200);
+            return response()->json('correct answer', 200);
         } else {
-            return response()->json(['message' => 'Tite is not long'], 400);
+            return response()->json(['message' => 'wrong answer'], 400);
         }
     }
 
