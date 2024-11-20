@@ -37,7 +37,9 @@ Route::get('/closer',[AdminHomeController::class,'closerer'])->name('closer');
 
 Route::get('/createroom',[CreateRoomController::class,'connector'])->middleware('auth')->name('createroom');
 
-Route::get('/joinroom',[JoinRoomController::class,'connector'])->middleware('auth')->name('joinroom');
+Route::get('/joinroom',[JoinRoomController::class,'connector'])->name('joinroom');
+
+Route::post('/joinroom', [JoinRoomController::class, 'checkRoomCode'])->name('validatecode');
 
 Route::get('/createcode',[CreateCodeController::class,'connector'])->middleware('auth')->name('createcode');
 
@@ -53,7 +55,7 @@ Route::get('/customcode',[CustomCodeController::class,'connector'])->middleware(
 
 Route::get('/ccdirecteasy',[QuestionController::class,'checkQnulleasy'])->middleware('auth')->name('ccdirecteasy');
 
-Route::get('/userhome',[UserHomeController::class,'connector'])->middleware('auth')->name('userhome');
+Route::get('/userhome',[UserHomeController::class,'connector'])->name('userhome');
 
 Route::get('/game',[GameController::class,'connector'])->middleware('auth')->name('game');
 
@@ -116,3 +118,4 @@ Route::get('/managequestionsmode',[ManageQuestionsController::class,'mqm'])->mid
 Route::get('/inputeasy',[EasyQuestionsController::class,'inpeasy'])->middleware('auth')->name('inputeasy');
 Route::get('/inputmedium',[MediumQuestionsController::class,'inpmedium'])->middleware('auth')->name('inputmedium');
 Route::get('/inputhard',[HardQuestionsController::class,'inphard'])->middleware('auth')->name('inputhard');
+

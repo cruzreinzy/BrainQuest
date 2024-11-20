@@ -99,7 +99,7 @@ $(document).ready(function() {
                 function moveImage() {
                     movingposition -= 20; // Move left by 2 pixels
                     if (movingposition < -100) { // If the image goes off the left side
-                        movingposition = 1500; // Reset to the right side
+                         // Reset to the right side
                         // movingImage.style.visibility = "hidden";
                     }
 
