@@ -39,7 +39,7 @@
     </div>
 
     <div style="position:absolute; top: 650px; left: 1445px;">
-    <a href="{{route('adminhome')}}" style="font-size: 20px; font-family:Arial, Helvetica, sans-serif; background-color: red; border-radius: 50%; outline: solid; outline-color: white; outline-width: 3.5px; text-decoration: none; padding-top: 19px; padding-bottom: 20px; padding-left: 17px; padding-right: 17px; color: white;">Exit</a>
+    <a href="{{route('userhome')}}" style="font-size: 20px; font-family:Arial, Helvetica, sans-serif; background-color: red; border-radius: 50%; outline: solid; outline-color: white; outline-width: 3.5px; text-decoration: none; padding-top: 19px; padding-bottom: 20px; padding-left: 17px; padding-right: 17px; color: white;">Exit</a>
     </div>
 
     <script>
@@ -85,7 +85,7 @@ $(document).ready(function() {
                         setTimeout(() => {
                             jumpingImage.style.transform = 'translateY(0)';
                             jumping = false;
-                        }, 600); // Duration of jump
+                        }, 500); // Duration of jump
                     }
                 }
 
@@ -97,7 +97,7 @@ $(document).ready(function() {
                 });
 
                 function moveImage() {
-                    movingposition -= 10; // Move left by 2 pixels
+                    movingposition -= 20; // Move left by 2 pixels
                     if (movingposition < -100) { // If the image goes off the left side
                         movingposition = 1500; // Reset to the right side
                         // movingImage.style.visibility = "hidden";

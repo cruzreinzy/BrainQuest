@@ -22,24 +22,24 @@ class QuestionController extends Controller
         }
     }
 
-    public function addQuestion(Request $request)
-    {
-        $questionInfo = $request->validate(
-            [                                     
-                'quest' => 'required|min:5|string',
-                'ans' => 'required|min:5|string'
-            ]
-        );
+    // public function addQuestion(Request $request)
+    // {
+    //     $questionInfo = $request->validate(
+    //         [                                     
+    //             'quest' => 'required|min:5|string',
+    //             'ans' => 'required|min:5|string'
+    //         ]
+    //     );
 
-        Question::create(
-            [
-                'question' => $questionInfo['quest'],
-                'answer' => $questionInfo['ans']
-            ]
-        );
+    //     Question::create(
+    //         [
+    //             'question' => $questionInfo['quest'],
+    //             'answer' => $questionInfo['ans']
+    //         ]
+    //     );
 
-        return redirect()->back();
-    }
+    //     return redirect()->back();
+    // }
 
     public function checkEasyAnswer(Request $request):JsonResponse
     {

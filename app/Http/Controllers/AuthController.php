@@ -29,11 +29,11 @@ class AuthController extends Controller
     {
         return view('adminlogin');
     }
-
+    
     public function userlogin(Request $request)
     {
 
-        $credential = $request->only('playername', 'playerpass');
+        $credential = $request->only('username', 'password');
 
         if (Auth::attempt($credential)) {
             $request->session()->regenerate();
@@ -57,6 +57,17 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/adminlogin');
+    }
+
+    public function userlogout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/userlogin');
     }
 
 

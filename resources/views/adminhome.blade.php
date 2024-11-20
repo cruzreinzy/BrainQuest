@@ -10,6 +10,10 @@
             <br>
             <br>
             <br>
+            <a href="{{route('manageusers')}}" style="text-decoration: none; border-style: solid; border-radius: 4px; border-color: brown; padding: 10px; font-size: 25px; color: black;">MANAGE USERS</a>
+            <br>
+            <br>
+            <br>
             <a href="{{route('leaderboards')}}" style="text-decoration: none; border-style: solid; border-radius: 4px; border-color: brown; padding: 10px; font-size: 20px; color: black;">LEADERBOARDS</a>
             <br>
             <br>

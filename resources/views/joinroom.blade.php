@@ -3,7 +3,7 @@
 @section('contents')
         <div style="text-align:center; margin-top: 15px;">
             
-            <form action="{{route('waiting')}}" method="get" id="questions">
+            <form action="{{route('game')}}" method="get" id="questions">
 
             <label for="quest">Enter Room Code:</label>
             <br>

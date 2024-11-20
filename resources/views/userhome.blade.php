@@ -10,7 +10,7 @@
             <br>
             <br>
             <br>
-            <a href="#" style="text-decoration: none; border-style: solid; border-radius: 4px; border-color: brown; padding: 10px; font-size: 15px; color: red;">EXIT</a>
+            <a href="{{route('userunauthenticate')}}" style="text-decoration: none; border-style: solid; border-radius: 4px; border-color: brown; padding: 10px; font-size: 15px; color: red;">EXIT</a>
         </div>
 @endsection
 
